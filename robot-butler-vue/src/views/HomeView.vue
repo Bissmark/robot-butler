@@ -71,7 +71,10 @@
     </form>
     <p>We do not send spam. All newsletters can be easily unsubscribed via the email</p>
 
-    <span>The Robot Butler</span>
+      <footer>
+        The Robot Butler
+        <img class="robot-icon" src="../assets/robot-icon.png" alt="robot icon">
+      </footer>
   </container>
 </div>
 </template>
@@ -122,6 +125,8 @@ h1 {
 p {
   font-family: "Iceland-Regular";
   font-size: 20px;
+  line-height: 1;
+  margin: 20px;
 }
 
 .title {
@@ -154,16 +159,24 @@ button {
   border: none;
   height: 40px;
   width: 150px;
-  display: block;
+  line-height: 10px;
   border-radius: 16px;
   font-family: "Iceland-Regular";
   font-size: 30px;
-  margin: 10px 150px;
+  margin: 30px 150px;
+  padding: 0 0 5px 0;
 }
 
-span {
+footer {
   font-family: "Iceland-Regular";
   font-size: 20px;
   text-align: center;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+}
+
+footer img.robot-icon {
+  height: 90px;
 }
 </style>
