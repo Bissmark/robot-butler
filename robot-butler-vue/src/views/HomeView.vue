@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h1>The Robot Butler</h1>
+    <div class="title">
+      <h1 class="the">The</h1>
+      <h1 class="butler">Robot Butler</h1>  
+    </div>
+    
     <img class="robot" alt="robot" src="../assets/robot.jpeg">
     <p>Check out the latest skills of the Robot Butler!</p>
     <LazyYoutube
@@ -46,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @font-face {
   font-family: "Iceland-Regular";
   src: local("Iceland-Regular"),
@@ -60,9 +64,26 @@ h1 {
 
 p {
   font-family: "Iceland-Regular";
+  font-size: 20px;
+}
+
+.title {
+  display: block;
+  margin: 0;
+}
+
+.title h1.the {
+  margin: 0;
+}
+
+.title h1.butler {
+  margin: 10px 40px;
 }
 
 .robot {
-  max-width: 400px;
+  max-width: 600px;
+  display: block;
+  padding: 0;
+  margin: 0;
 }
 </style>
