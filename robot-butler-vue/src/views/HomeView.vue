@@ -1,6 +1,6 @@
 <template>
   <div class="ALL">
-  <container>
+  <div class="container">
     <div class="title">
       <h1 class="the">The</h1>
       <h1 class="butler">Robot Butler</h1>  
@@ -75,7 +75,7 @@
         The Robot Butler
         <img class="robot-icon" src="../assets/robot-icon.png" alt="robot icon">
       </footer>
-  </container>
+    </div>
 </div>
 </template>
 
@@ -112,8 +112,8 @@ export default {
   background-color: #c3cadd;
 }
 
-.container {
-  margin: 0 auto;
+container {
+  margin: 10px;
   max-width: 960px;
 }
 
@@ -136,10 +136,12 @@ p {
 
 .title h1.the {
   margin: 0;
+  padding: 0 0 0 10px;
 }
 
 .title h1.butler {
-  margin: 10px 40px;
+  margin: 0 40px;
+  padding: 0 0 0 10px;
 }
 
 .robot {
@@ -151,6 +153,27 @@ p {
 
 input[type='checkbox'] {
   align-content: aqua;
+}
+
+input {
+  width: 400px;
+  padding: 10px 0 10px 0;
+  margin: 0 0 0 20px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  border: none;
+  background-color:rgb(104, 43, 226);
+  color: white;
+}
+
+p.input {
+  font-size: small;
+  text-align: center;
+}
+
+::placeholder {
+  color: white;
+  padding: 20px;
 }
 
 button {
