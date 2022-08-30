@@ -1,4 +1,5 @@
 <template>
+  <div class="ALL">
   <container>
     <div class="title">
       <h1 class="the">The</h1>
@@ -15,17 +16,34 @@
     
     <form>
       <div>
-        <input type="" placeholder="Name (first)">
+        <input type="text" placeholder="Name (first)">
         <p class="input">Must contain a minimum of two letters and no numbers</p>
       </div>
       <div>
-        <input type="" placeholder="Name (last)">
+        <input type="text" placeholder="Name (last)">
         <p class="input">Must contain a minimum of two letters and no numbers</p>
       </div>
       <div>
-        <input type="" placeholder="Email">
+        <input type="email" placeholder="Email">
         <p class="input">Must contain an @ and at least one '.'</p>
       </div> 
+      <!-- <div role="group">
+      <label for="input-live">Name:</label>
+    <b-form-input
+      id="input-live"
+      v-model="name"
+      :state="nameState"
+      aria-describedby="input-live-help input-live-feedback"
+      placeholder="Enter your name"
+      trim
+    ></b-form-input>
+
+    <b-form-invalid-feedback id="input-live-feedback">
+      Enter at least 3 letters
+    </b-form-invalid-feedback>
+
+    <b-form-text id="input-live-help">Your full name.</b-form-text>
+  </div> -->
     </form>
 
     <p>What Featues and Functions would you like to recieve up dates on?</p>
@@ -55,6 +73,7 @@
 
     <span>The Robot Butler</span>
   </container>
+</div>
 </template>
 
 <script>
@@ -65,6 +84,17 @@ export default {
     components: {
         LazyYoutube
     },
+    computed: {
+      nameState() {
+        return this.name.length > 2 ? true : false
+      }
+    },
+    data() {
+      return {
+        name: ''
+      }
+    }
+  
 }
 </script>
 
@@ -73,6 +103,10 @@ export default {
   font-family: "Iceland-Regular";
   src: local("Iceland-Regular"),
   url(../fonts/Iceland-Regular.ttf) format("truetype")
+}
+
+.ALL {
+  background-color: #c3cadd;
 }
 
 .container {
