@@ -16,15 +16,15 @@
     
     <form>
       <div>
-        <input type="text" placeholder="Name (first)">
+        <input class="signin" type="text" placeholder="Name (first)">
         <p class="input">Must contain a minimum of two letters and no numbers</p>
       </div>
       <div>
-        <input type="text" placeholder="Name (last)">
+        <input class="signin" type="text" placeholder="Name (last)">
         <p class="input">Must contain a minimum of two letters and no numbers</p>
       </div>
       <div>
-        <input type="email" placeholder="Email">
+        <input class="signin" type="email" placeholder="Email">
         <p class="input">Must contain an @ and at least one '.'</p>
       </div> 
       <!-- <div role="group">
@@ -70,12 +70,11 @@
       <button class="signup">Sign up</button>
     </form>
     <p>We do not send spam. All newsletters can be easily unsubscribed via the email</p>
-
-      <footer>
+    </div>
+    <footer>
         The Robot Butler
         <img class="robot-icon" src="../assets/robot-icon.png" alt="robot icon">
       </footer>
-    </div>
 </div>
 </template>
 
@@ -112,8 +111,7 @@ export default {
   background-color: #c3cadd;
 }
 
-container {
-  margin: 10px;
+div.container {
   max-width: 960px;
 }
 
@@ -144,6 +142,15 @@ p {
   padding: 0 0 0 10px;
 }
 
+div.checkboxes {
+  display: inline;
+  text-align: center;
+}
+
+div label.form-check-label {
+  font-family: "Iceland-Regular";
+}
+
 .robot {
   max-width: 400px;
   display: block;
@@ -152,23 +159,25 @@ p {
 }
 
 input[type='checkbox'] {
-  align-content: aqua;
+  display: block;
+  margin: 0 0 0 70px;
 }
 
-input {
-  width: 400px;
+input.signin {
+  height: 60px;
+  width: 320px;
   padding: 10px 0 10px 0;
-  margin: 0 0 0 20px;
-  box-sizing: border-box;
+  margin: 15px 0 0 20px;
   border-radius: 24px;
   border: none;
-  background-color:rgb(104, 43, 226);
+  background-color: #5d68d1;
   color: white;
 }
 
 p.input {
   font-size: small;
   text-align: center;
+  margin: 0;
 }
 
 ::placeholder {
@@ -186,7 +195,7 @@ button {
   border-radius: 16px;
   font-family: "Iceland-Regular";
   font-size: 30px;
-  margin: 30px 150px;
+  margin: 20px 10px 10px 100px;
   padding: 0 0 5px 0;
 }
 
