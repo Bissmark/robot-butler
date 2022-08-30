@@ -104,7 +104,7 @@ p {
 }
 
 .robot {
-  max-width: 600px;
+  max-width: 400px;
   display: block;
   padding: 0;
   margin: 0;
