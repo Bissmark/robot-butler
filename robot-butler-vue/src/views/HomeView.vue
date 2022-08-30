@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <container>
     <div class="title">
       <h1 class="the">The</h1>
       <h1 class="butler">Robot Butler</h1>  
@@ -13,30 +13,48 @@
     />
     <p>To keep up to date with the new robot Features and Functions sign up to our news letter.</p>
     
+    <form>
+      <div>
+        <input type="" placeholder="Name (first)">
+        <p class="input">Must contain a minimum of two letters and no numbers</p>
+      </div>
+      <div>
+        <input type="" placeholder="Name (last)">
+        <p class="input">Must contain a minimum of two letters and no numbers</p>
+      </div>
+      <div>
+        <input type="" placeholder="Email">
+        <p class="input">Must contain an @ and at least one '.'</p>
+      </div> 
+    </form>
+
     <p>What Featues and Functions would you like to recieve up dates on?</p>
   
     <form>
-      <div>
-        <input type="checkbox" id="accept" class="form-check-input">
-        <label class="form-check-label" for="accept">Personalization</label>
-      </div>
-      <div>
-        <input type="checkbox" id="accept" class="form-check-input">
-        <label class="form-check-label" for="accept">Skills cooking, cleaning etc</label>
-      </div>
-      <div>
-        <input type="checkbox" id="accept" class="form-check-input">
-        <label class="form-check-label" for="accept">Robot upgrades</label>
-      </div>
-      <div>
-        <input type="checkbox" id="accept" class="form-check-input">
-        <label class="form-check-label" for="accept">Other services and products</label>
+      <div class="checkboxes"> 
+        <div>
+          <input type="checkbox" id="accept" class="form-check-input">
+          <label class="form-check-label" for="accept">Personalization</label>
+        </div>
+        <div>
+          <input type="checkbox" id="accept" class="form-check-input">
+          <label class="form-check-label" for="accept">Skills cooking, cleaning etc</label>
+        </div>
+        <div>
+          <input type="checkbox" id="accept" class="form-check-input">
+          <label class="form-check-label" for="accept">Robot upgrades</label>
+        </div>
+        <div>
+          <input type="checkbox" id="accept" class="form-check-input">
+          <label class="form-check-label" for="accept">Other services and products</label>
+        </div>
       </div>
       <button class="signup">Sign up</button>
     </form>
     <p>We do not send spam. All newsletters can be easily unsubscribed via the email</p>
 
-  </div>
+    <span>The Robot Butler</span>
+  </container>
 </template>
 
 <script>
@@ -55,6 +73,11 @@ export default {
   font-family: "Iceland-Regular";
   src: local("Iceland-Regular"),
   url(../fonts/Iceland-Regular.ttf) format("truetype")
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
 }
 
 h1 {
@@ -85,5 +108,28 @@ p {
   display: block;
   padding: 0;
   margin: 0;
+}
+
+input[type='checkbox'] {
+  align-content: aqua;
+}
+
+button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 150px;
+  display: block;
+  border-radius: 16px;
+  font-family: "Iceland-Regular";
+  font-size: 30px;
+  margin: 10px 150px;
+}
+
+span {
+  font-family: "Iceland-Regular";
+  font-size: 20px;
+  text-align: center;
 }
 </style>
