@@ -20,7 +20,7 @@
           <b-form-input
             id="input-live"
             v-model="email"
-            :state="nameState"
+            :state="emailState"
             aria-describedby="input-live-help input-live-feedback"
             placeholder="    Email">
             trim
@@ -35,7 +35,7 @@
           <b-form-input
             id="input-live"
             v-model="first"
-            :state="nameState"
+            :state="firstState"
             aria-describedby="input-live-help input-live-feedback"
             placeholder="     Name (first)"
             trim
@@ -49,7 +49,7 @@
           <b-form-input
             id="input-live"
             v-model="last"
-            :state="nameState"
+            :state="lastState"
             aria-describedby="input-live-help input-live-feedback"
             placeholder="     Name (last)"
             trim
@@ -106,9 +106,15 @@ export default {
         LazyYoutube
     },
     computed: {
-      nameState() {
+      emailState() {
         return this.email.length > 1 ? true : false
-      }
+      },
+      firstState() {
+        return this.first.length > 1 ? true : false 
+      },
+      lastState() {
+        return this.last.length > 1 ? true : false
+      },
     },
     data() {
       return {
