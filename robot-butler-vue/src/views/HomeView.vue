@@ -19,10 +19,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="email"
-            :state="emailState"
+            v-model="first"
+            :state="firstState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="Email">
+            placeholder="Name (first)">
             trim
           ></b-form-input>
 
@@ -34,10 +34,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="first"
-            :state="firstState"
+            v-model="last"
+            :state="lastState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="Name (first)"
+            placeholder="Name (last)"
             trim
           ></b-form-input>
 
@@ -48,10 +48,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="last"
-            :state="lastState"
+            v-model="email"
+            :state="emailState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="Name (last)"
+            placeholder="Email"
             trim
           ></b-form-input>
 
@@ -147,6 +147,12 @@ export default {
   border-radius: 24px;
   border: none;
   background-color: #5d68d1;
+  color: white;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
 }
 
 .checkboxes div {
