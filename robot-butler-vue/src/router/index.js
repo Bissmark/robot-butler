@@ -25,32 +25,24 @@ const routes = [
     }
 
   }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  history: createWebHistory(process.env.BASE_URL),
+  //history: createWebHistory(process.env.BASE_URL),
   routes
 })
 
-router.beforeEach((to, from, next) => {
-  // get current user info
-  const currentUser = supabase.auth.user();
-  const requiresAuth = to.matched.some
-  (record => record.meta.requiresAuth);
+// router.beforeEach((to, from, next) => {
+//   // get current user info
+//   const currentUser = supabase.auth.user();
+//   const requiresAuth = to.matched.some
+//   (record => record.meta.requiresAuth);
 
-  if(requiresAuth && !currentUser) next('sign-in');
-  else if(!requiresAuth && currentUser) next("/");
-  else next();
-})
+//   if(requiresAuth && !currentUser) next('sign-in');
+//   else if(!requiresAuth && currentUser) next("/");
+//   else next();
+// })
 
 export default router

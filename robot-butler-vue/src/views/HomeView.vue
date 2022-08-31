@@ -6,7 +6,7 @@
       <h1 class="butler">Robot Butler</h1>  
     </div>
     
-    <img class="robot" alt="robot" src="../assets/robot.jpeg">
+    <img class="robot" alt="robot" src="../assets/robot.png">
     <p>Check out the latest skills of the Robot Butler!</p>
     <LazyYoutube
       ref="lazyVideo"
@@ -15,40 +15,6 @@
     <p>To keep up to date with the new robot Features and Functions sign up to our news letter.</p>
     
     <form>
-      <!-- <div>
-        <input class="signin" type="text" placeholder="Name (first)">
-        <p class="input">Must contain a minimum of two letters and no numbers</p>
-      </div> -->
-      <!-- <div>
-        <input class="signin" type="text" placeholder="Name (last)">
-        <p class="input">Must contain a minimum of two letters and no numbers</p>
-      </div> -->
-      <!-- <div>
-        <input class="signin" type="email" placeholder="Email">
-        <p class="input">Must contain an @ and at least one '.'</p>
-<<<<<<< HEAD
-      </div> 
-      <!-- <div role="group">
-      <label for="input-live">Name:</label>
-    <b-form-input
-      id="input-live"
-      v-model="name"
-      :state="nameState"
-      aria-describedby="input-live-help input-live-feedback"
-      placeholder="Enter your name"
-      trim
-    ></b-form-input>
-
-    <b-form-invalid-feedback id="input-live-feedback">
-      Enter at least 3 letters
-    </b-form-invalid-feedback>
-
-    <b-form-text id="input-live-help">Your full name.</b-form-text>
-  </div> -->
-    <!-- </form> -->
-=======
-      </div>  -->
-
       <div role="group">
         <label for="input-live"></label>
           <b-form-input
@@ -93,11 +59,10 @@
       </div>      
 
     </form>
->>>>>>> 93ce76b14aa21a53011c6dfd586a2e03f7017405
 
     <p>What Features and Functions would you like to recieve up dates on?</p>
   
-    <!-- <form> -->
+    <form>
       <div class="checkboxes"> 
         <div>
           <input type="checkbox" id="accept" class="form-check-input">
@@ -117,14 +82,16 @@
         </div>
       </div>
       <div>
+        <p class="spam">We do not send spam.</p>
         <b-button class="signup" v-b-modal.modal-1>Sign up</b-button>
-        <b-modal id="modal-1" content-class="alertBackground" title="Thank you for signing up!">
-          <p class="my-4">A confirmation email has been sent to your inbox to confirm</p>
+        <b-modal hide-footer="true" id="modal-1" content-class="alertBackground" title="Thank you for signing up!">
+          <p class="my-4">A welcome email has been sent to your inbox to confirm</p>
           <p>We do not send spam. All newsletters can be easily unsubscribed via the email.</p>
         </b-modal>
       </div>
     </form>
-    <p>We do not send spam. All newsletters can be easily unsubscribed via the email</p>
+    
+    <span class="newsletter">All newsletters can be easily unsubscribed via the email</span>
     </div>
     <footer>
         The Robot Butler
@@ -196,11 +163,26 @@ p {
   font-size: 20px;
   line-height: 1;
   margin: 20px;
+  text-align: center;
+}
+
+span {
+  font-family: "Iceland-Regular";
+  font-size: 20px;
+  text-align: center;
+}
+
+p.spam {
+  text-align: center;
 }
 
 .title {
   display: block;
   margin: 0;
+}
+
+label {
+  font-size: 20px;
 }
 
 .title h1.the {
@@ -223,7 +205,7 @@ div label.form-check-label {
 }
 
 .robot {
-  max-width: 300px;
+  max-width: 375px;
   display: block;
   padding: 0;
   margin: 0;
@@ -231,7 +213,8 @@ div label.form-check-label {
 
 input[type='checkbox'] {
   display: block;
-  margin: 0 0 0 70px;
+  margin: 8px 0 0 40px;
+  transform: scale(2);
 }
 
 /* input.signin {
@@ -266,7 +249,7 @@ button {
   border-radius: 16px;
   font-family: "Iceland-Regular";
   font-size: 30px;
-  margin: 20px 10px 10px 100px;
+  margin: 0 10px 10px 100px;
   padding: 0 0 5px 0;
 }
 
