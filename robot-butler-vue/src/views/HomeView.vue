@@ -35,11 +35,12 @@
             v-model="first"
             :state="nameState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="Email"
+            placeholder="    Email">
             trim
           ></b-form-input>
 
-          <p class="input">Must contain a minimum of two letters and no numbers</p>
+          <p class="input">Must contain an @ and at least one '.'</p>
+
       </div>
         
         <div role="group">
@@ -49,11 +50,11 @@
             v-model="last"
             :state="nameState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="Name (last)"
+            placeholder="     Name (last)"
             trim
           ></b-form-input>
 
-          <p class="input">Must contain an @ and at least one '.'</p>
+          <p class="input">Must contain a minimum of two letters and no numbers</p>
       </div>
 
       <div role="group">
@@ -63,7 +64,7 @@
             v-model="email"
             :state="nameState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="Name (last)"
+            placeholder="     Name (last)"
             trim
           ></b-form-input>
 
