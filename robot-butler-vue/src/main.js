@@ -1,16 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import VueAnalytics from 'vue-analytics'
+// import VueAnalytics from 'vue-analytics'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 
 // Config for Vue analytics
-Vue.use(VueAnalytics, {
-  id: ''
-});
+// Vue.use(VueAnalytics, {
+//   id: ''
+// });
 
 new Vue({
   router,
