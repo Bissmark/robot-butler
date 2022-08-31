@@ -22,7 +22,7 @@
             v-model="email"
             :state="emailState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="    Email">
+            placeholder="Email">
             trim
           ></b-form-input>
 
@@ -37,7 +37,7 @@
             v-model="first"
             :state="firstState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="     Name (first)"
+            placeholder="Name (first)"
             trim
           ></b-form-input>
 
@@ -51,7 +51,7 @@
             v-model="last"
             :state="lastState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="     Name (last)"
+            placeholder="Name (last)"
             trim
           ></b-form-input>
 
@@ -61,40 +61,24 @@
     </form>
 
     <p>What Features and Functions would you like to recieve up dates on?</p>
-  
-      <!-- <div class="checkboxes"> 
-        <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Personalization</label>
-        </div>
-        <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Skills cooking, cleaning etc</label>
-        </div>
-        <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Robot upgrades</label>
-        </div>
-        <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Other services and products</label>
-        </div>
-      </div> -->
 
-      <div class="checkbox">
-
-        <b-form-checkbox size="lg"></b-form-checkbox>
-        <p class="checkbox">Personalization</p>
-
-        <b-form-checkbox size="lg"></b-form-checkbox>
+      <div class="checkboxes">
+        <div>
+          <b-form-checkbox inline size="lg"></b-form-checkbox>
+          <p class="checkbox">Personalization</p>
+        </div>
+        <div>
+        <b-form-checkbox inline size="lg"></b-form-checkbox>
         <p class="checkbox">Skills: cooking, cleaning etc</p>
-
-        <b-form-checkbox size="lg"></b-form-checkbox>
+        </div>
+        <div>
+        <b-form-checkbox inline size="lg"></b-form-checkbox>
         <p class="checkbox">Robot upgrades</p>
-
-        <b-form-checkbox size="lg"></b-form-checkbox>
+        </div>
+        <div>
+        <b-form-checkbox inline size="lg"></b-form-checkbox>
         <p class="checkbox">Other services and products</p>
-      
+        </div>
       </div>
 
       <div>
@@ -154,17 +138,30 @@ export default {
   height: 60px;
   width: 320px;
   padding: 10px 0 10px 0;
+  padding-left: 40px;
   margin: 15px 0 0 20px;
   border-radius: 24px;
   border: none;
   background-color: #5d68d1;
 }
 
-.checkbox {
+.checkboxes div {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.checkboxes {
   font-size: 20px;
   font-family: "Iceland-Regular";
-  display: inline;
   text-align: center;
+}
+
+.checkbox {
+  display: inline;
+  margin: 0;
+  margin-top: 6px;
 }
 
 .ALL {
