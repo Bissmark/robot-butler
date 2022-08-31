@@ -198,17 +198,6 @@ input[type='checkbox'] {
   margin: 0 0 0 70px;
 }
 
-/* input.signin {
-  height: 60px;
-  width: 320px;
-  padding: 10px 0 10px 0;
-  margin: 15px 0 0 20px;
-  border-radius: 24px;
-  border: none;
-  background-color: #5d68d1;
-  color: white;
-} */
-
 p.input {
   font-size: small;
   text-align: center;
