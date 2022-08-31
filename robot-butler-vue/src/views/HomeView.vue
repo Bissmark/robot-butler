@@ -1,5 +1,5 @@
 <template>
-  <div class="ALL">
+<div class="ALL">
   <div class="container">
     <div class="title">
       <h1 class="the">The</h1>
@@ -15,17 +15,18 @@
     <p>To keep up to date with the new robot Features and Functions sign up to our news letter.</p>
     
     <form>
-      <div>
+      <!-- <div>
         <input class="signin" type="text" placeholder="Name (first)">
         <p class="input">Must contain a minimum of two letters and no numbers</p>
-      </div>
-      <div>
+      </div> -->
+      <!-- <div>
         <input class="signin" type="text" placeholder="Name (last)">
         <p class="input">Must contain a minimum of two letters and no numbers</p>
-      </div>
-      <div>
+      </div> -->
+      <!-- <div>
         <input class="signin" type="email" placeholder="Email">
         <p class="input">Must contain an @ and at least one '.'</p>
+<<<<<<< HEAD
       </div> 
       <!-- <div role="group">
       <label for="input-live">Name:</label>
@@ -45,8 +46,56 @@
     <b-form-text id="input-live-help">Your full name.</b-form-text>
   </div> -->
     <!-- </form> -->
+=======
+      </div>  -->
 
-    <p>What Featues and Functions would you like to recieve up dates on?</p>
+      <div role="group">
+        <label for="input-live"></label>
+          <b-form-input
+            id="input-live"
+            v-model="first"
+            :state="nameState"
+            aria-describedby="input-live-help input-live-feedback"
+            placeholder="    Email">
+            trim
+          ></b-form-input>
+
+          <p class="input">Must contain an @ and at least one '.'</p>
+
+      </div>
+        
+        <div role="group">
+        <label for="input-live"></label>
+          <b-form-input
+            id="input-live"
+            v-model="last"
+            :state="nameState"
+            aria-describedby="input-live-help input-live-feedback"
+            placeholder="     Name (last)"
+            trim
+          ></b-form-input>
+
+          <p class="input">Must contain a minimum of two letters and no numbers</p>
+      </div>
+
+      <div role="group">
+        <label for="input-live"></label>
+          <b-form-input
+            id="input-live"
+            v-model="email"
+            :state="nameState"
+            aria-describedby="input-live-help input-live-feedback"
+            placeholder="     Name (last)"
+            trim
+          ></b-form-input>
+
+          <p class="input">Must contain a minimum of two letters and no numbers</p>
+      </div>      
+
+    </form>
+>>>>>>> 93ce76b14aa21a53011c6dfd586a2e03f7017405
+
+    <p>What Features and Functions would you like to recieve up dates on?</p>
   
     <!-- <form> -->
       <div class="checkboxes"> 
@@ -94,12 +143,14 @@ export default {
     },
     computed: {
       nameState() {
-        return this.name.length > 2 ? true : false
+        return this.first.length > 1 ? true : false
       }
     },
     data() {
       return {
-        name: ''
+        email: '',
+        first: '',
+        last: ''
       }
     }
 }
@@ -110,6 +161,16 @@ export default {
   font-family: "Iceland-Regular";
   src: local("Iceland-Regular"),
   url(../fonts/Iceland-Regular.ttf) format("truetype")
+}
+
+.form-control {
+  height: 60px;
+  width: 320px;
+  padding: 10px 0 10px 0;
+  margin: 15px 0 0 20px;
+  border-radius: 24px;
+  border: none;
+  background-color: #5d68d1;
 }
 
 .ALL {
@@ -173,7 +234,7 @@ input[type='checkbox'] {
   margin: 0 0 0 70px;
 }
 
-input.signin {
+/* input.signin {
   height: 60px;
   width: 320px;
   padding: 10px 0 10px 0;
@@ -182,7 +243,7 @@ input.signin {
   border: none;
   background-color: #5d68d1;
   color: white;
-}
+} */
 
 p.input {
   font-size: small;
