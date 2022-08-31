@@ -26,6 +26,27 @@
       <!-- <div>
         <input class="signin" type="email" placeholder="Email">
         <p class="input">Must contain an @ and at least one '.'</p>
+<<<<<<< HEAD
+      </div> 
+      <!-- <div role="group">
+      <label for="input-live">Name:</label>
+    <b-form-input
+      id="input-live"
+      v-model="name"
+      :state="nameState"
+      aria-describedby="input-live-help input-live-feedback"
+      placeholder="Enter your name"
+      trim
+    ></b-form-input>
+
+    <b-form-invalid-feedback id="input-live-feedback">
+      Enter at least 3 letters
+    </b-form-invalid-feedback>
+
+    <b-form-text id="input-live-help">Your full name.</b-form-text>
+  </div> -->
+    <!-- </form> -->
+=======
       </div>  -->
 
       <div role="group">
@@ -72,10 +93,11 @@
       </div>      
 
     </form>
+>>>>>>> 93ce76b14aa21a53011c6dfd586a2e03f7017405
 
     <p>What Features and Functions would you like to recieve up dates on?</p>
   
-    <form>
+    <!-- <form> -->
       <div class="checkboxes"> 
         <div>
           <input type="checkbox" id="accept" class="form-check-input">
@@ -94,7 +116,13 @@
           <label class="form-check-label" for="accept">Other services and products</label>
         </div>
       </div>
-      <button class="signup">Sign up</button>
+      <div>
+        <b-button class="signup" v-b-modal.modal-1>Sign up</b-button>
+        <b-modal id="modal-1" content-class="alertBackground" title="Thank you for signing up!">
+          <p class="my-4">A confirmation email has been sent to your inbox to confirm</p>
+          <p>We do not send spam. All newsletters can be easily unsubscribed via the email.</p>
+        </b-modal>
+      </div>
     </form>
     <p>We do not send spam. All newsletters can be easily unsubscribed via the email</p>
     </div>
@@ -125,7 +153,6 @@ export default {
         last: ''
       }
     }
-  
 }
 </script>
 
@@ -148,6 +175,11 @@ export default {
 
 .ALL {
   background-color: #c3cadd;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
 }
 
 div.container {
@@ -191,7 +223,7 @@ div label.form-check-label {
 }
 
 .robot {
-  max-width: 400px;
+  max-width: 300px;
   display: block;
   padding: 0;
   margin: 0;
