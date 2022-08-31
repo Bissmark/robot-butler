@@ -19,10 +19,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="first"
-            :state="nameState"
+            v-model="email"
+            :state="emailState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="    Email">
+            placeholder="Email">
             trim
           ></b-form-input>
 
@@ -34,10 +34,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="last"
-            :state="nameState"
+            v-model="first"
+            :state="firstState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="     Name (last)"
+            placeholder="Name (first)"
             trim
           ></b-form-input>
 
@@ -48,10 +48,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="email"
-            :state="nameState"
+            v-model="last"
+            :state="lastState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="     Name (last)"
+            placeholder="Name (last)"
             trim
           ></b-form-input>
 
@@ -63,28 +63,30 @@
     <p>What Features and Functions would you like to recieve up dates on?</p>
   
     <form>
-      <div class="checkboxes"> 
+      <div class="checkboxes">
         <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Personalization</label>
+          <b-form-checkbox inline size="lg"></b-form-checkbox>
+          <p class="checkbox">Personalization</p>
         </div>
         <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Skills cooking, cleaning etc</label>
+        <b-form-checkbox inline size="lg"></b-form-checkbox>
+        <p class="checkbox">Skills: cooking, cleaning etc</p>
         </div>
         <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Robot upgrades</label>
+        <b-form-checkbox inline size="lg"></b-form-checkbox>
+        <p class="checkbox">Robot upgrades</p>
         </div>
         <div>
-          <input type="checkbox" id="accept" class="form-check-input">
-          <label class="form-check-label" for="accept">Other services and products</label>
+        <b-form-checkbox inline size="lg"></b-form-checkbox>
+        <p class="checkbox">Other services and products</p>
         </div>
       </div>
+
       <div>
         <p class="spam">We do not send spam.</p>
         <b-button class="signup" v-b-modal.modal-1>Sign up</b-button>
         <b-modal hide-footer="true" id="modal-1" content-class="alertBackground" title="Thank you for signing up!">
+        <b-modal id="modal-1" content-class="alertBackground" title="Thank you for signing up!"></b-modal>
           <p class="my-4">A welcome email has been sent to your inbox to confirm</p>
           <p>We do not send spam. All newsletters can be easily unsubscribed via the email.</p>
         </b-modal>
@@ -109,9 +111,15 @@ export default {
         LazyYoutube
     },
     computed: {
-      nameState() {
-        return this.first.length > 1 ? true : false
-      }
+      emailState() {
+        return this.email.length > 1 ? true : false
+      },
+      firstState() {
+        return this.first.length > 1 ? true : false 
+      },
+      lastState() {
+        return this.last.length > 1 ? true : false
+      },
     },
     data() {
       return {
@@ -134,10 +142,30 @@ export default {
   height: 60px;
   width: 320px;
   padding: 10px 0 10px 0;
+  padding-left: 40px;
   margin: 15px 0 0 20px;
   border-radius: 24px;
   border: none;
   background-color: #5d68d1;
+}
+
+.checkboxes div {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.checkboxes {
+  font-size: 20px;
+  font-family: "Iceland-Regular";
+  text-align: center;
+}
+
+.checkbox {
+  display: inline;
+  margin: 0;
+  margin-top: 6px;
 }
 
 .ALL {
@@ -216,17 +244,6 @@ input[type='checkbox'] {
   margin: 8px 0 0 40px;
   transform: scale(2);
 }
-
-/* input.signin {
-  height: 60px;
-  width: 320px;
-  padding: 10px 0 10px 0;
-  margin: 15px 0 0 20px;
-  border-radius: 24px;
-  border: none;
-  background-color: #5d68d1;
-  color: white;
-} */
 
 p.input {
   font-size: small;
