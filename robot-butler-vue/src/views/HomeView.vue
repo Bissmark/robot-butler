@@ -143,6 +143,7 @@ export default {
   border-radius: 24px;
   border: none;
   background-color: #5d68d1;
+  color: white;
 }
 
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
