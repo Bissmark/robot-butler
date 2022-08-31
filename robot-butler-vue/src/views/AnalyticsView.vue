@@ -1,6 +1,27 @@
 <template>
-    <div>
-        Analytics
+    <div class="container-analytics">
+        <h1>Data Analytics</h1>
+
+        <h2>List of sign ups</h2>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+        <p>bob@gmail.com</p>
+
+        <div>
+            <h2>Site visits</h2>
+            <img class="robot" alt="robot" src="../assets/robot.png">
+            <img class="robot" alt="robot" src="../assets/robot.png">
+        </div>
+
+        <div>
+            <h2>Services chosen</h2>
+            <img class="robot" alt="robot" src="../assets/robot.png">
+        </div>
     </div>
 </template>
 
@@ -13,6 +34,27 @@
 </script>
     <!-- End Google Tag Manager -->
 
-<style>
+<style scoped>
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+    line-height: 1px;
+    padding: 0 0 0 30px;
+}
+
+.container-analytics {
+    background-color: black;
+    font-family: "Iceland-Regular";
+}
 
 </style>

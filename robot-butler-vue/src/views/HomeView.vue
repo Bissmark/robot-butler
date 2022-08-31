@@ -26,7 +26,7 @@
             trim
           ></b-form-input>
 
-          <p class="input">Must contain an @ and at least one '.'</p>
+          <p class="input">Must contain a minimum of two letters and no numbers</p>
 
       </div>
         
@@ -55,7 +55,7 @@
             trim
           ></b-form-input>
 
-          <p class="input">Must contain a minimum of two letters and no numbers</p>
+          <p class="input">Must contain an @ and at least one '.'</p>
       </div>      
 
     </form>
@@ -84,7 +84,7 @@
 
       <div>
         <p class="spam">We do not send spam.</p>
-        <b-button class="signup" v-b-modal.modal-1>Sign up</b-button>
+        <b-button :disabled="isBtnDisabled" class="signup" v-b-modal.modal-1>Sign up</b-button>
         <b-modal hide-footer="true" id="modal-1" content-class="alertBackground" title="Thank you for signing up!">
         <b-modal id="modal-1" content-class="alertBackground" title="Thank you for signing up!"></b-modal>
           <p class="my-4">A welcome email has been sent to your inbox to confirm</p>
@@ -120,6 +120,13 @@ export default {
       lastState() {
         return this.last.length > 1 ? true : false
       },
+      isBtnDisabled() {
+        return (
+          this.email.length === 0 ||
+          this.first.length === 0 ||
+          this.last.length === 0
+        )
+      }
     },
     data() {
       return {
@@ -245,12 +252,6 @@ div label.form-check-label {
   margin: 0;
 }
 
-input[type='checkbox'] {
-  display: block;
-  margin: 8px 0 0 40px;
-  transform: scale(2);
-}
-
 p.input {
   font-size: small;
   text-align: center;
@@ -259,7 +260,6 @@ p.input {
 
 ::placeholder {
   color: white;
-  padding: 20px;
 }
 
 button {
