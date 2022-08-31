@@ -15,10 +15,6 @@ Vue.use(VueAnalytics, {
   autoTracking: {
     exception: true
   },
-  // debug: {
-  //   enabled: !isProd,
-  //   sendHitTask: isProd
-  // }
 });
 
 Vue.use(BootStrapVue);
