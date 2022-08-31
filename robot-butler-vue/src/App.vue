@@ -6,6 +6,6 @@
 
 <style>
 .custom-control-label::after, .custom-control-label::after {
-  background-color: purple !important;
+  background-color: #5d68d1 !important;
 }
 </style>

@@ -175,8 +175,6 @@ export default {
   text-align: center;
 }
 
-
-
 .checkbox {
   display: inline;
   margin: 0;
