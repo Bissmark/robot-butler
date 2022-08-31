@@ -15,40 +15,6 @@
     <p>To keep up to date with the new robot Features and Functions sign up to our news letter.</p>
     
     <form>
-      <!-- <div>
-        <input class="signin" type="text" placeholder="Name (first)">
-        <p class="input">Must contain a minimum of two letters and no numbers</p>
-      </div> -->
-      <!-- <div>
-        <input class="signin" type="text" placeholder="Name (last)">
-        <p class="input">Must contain a minimum of two letters and no numbers</p>
-      </div> -->
-      <!-- <div>
-        <input class="signin" type="email" placeholder="Email">
-        <p class="input">Must contain an @ and at least one '.'</p>
-<<<<<<< HEAD
-      </div> 
-      <!-- <div role="group">
-      <label for="input-live">Name:</label>
-    <b-form-input
-      id="input-live"
-      v-model="name"
-      :state="nameState"
-      aria-describedby="input-live-help input-live-feedback"
-      placeholder="Enter your name"
-      trim
-    ></b-form-input>
-
-    <b-form-invalid-feedback id="input-live-feedback">
-      Enter at least 3 letters
-    </b-form-invalid-feedback>
-
-    <b-form-text id="input-live-help">Your full name.</b-form-text>
-  </div> -->
-    <!-- </form> -->
-=======
-      </div>  -->
-
       <div role="group">
         <label for="input-live"></label>
           <b-form-input
@@ -93,11 +59,9 @@
       </div>      
 
     </form>
->>>>>>> 93ce76b14aa21a53011c6dfd586a2e03f7017405
 
     <p>What Features and Functions would you like to recieve up dates on?</p>
   
-    <!-- <form> -->
       <div class="checkboxes"> 
         <div>
           <input type="checkbox" id="accept" class="form-check-input">
