@@ -18,17 +18,13 @@ const routes = [
   },
   {
     path: '/analytics',
-    name: '',
-    component: AnalyticsView,
-    meta: {
-      requresAuth: true
-    }
-
+    name: 'analytics',
+    component: AnalyticsView
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   //history: createWebHistory(process.env.BASE_URL),
   routes

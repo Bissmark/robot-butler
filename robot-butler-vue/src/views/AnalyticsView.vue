@@ -14,13 +14,12 @@
 
         <div>
             <h2>Site visits</h2>
-            <img class="robot" alt="robot" src="../assets/robot.png">
-            <img class="robot" alt="robot" src="../assets/robot.png">
+            <img class="robot" alt="robot" src="../assets/Group 1 (1).png">
         </div>
 
         <div>
             <h2>Services chosen</h2>
-            <img class="robot" alt="robot" src="../assets/robot.png">
+            <img class="robot2" alt="robot" src="../assets/Group 3.png">
         </div>
     </div>
 </template>
@@ -44,6 +43,14 @@ h1 {
 h2 {
     color: white;
     text-align: center;
+}
+
+img.robot {
+    padding: 0 0 0 35px;
+}
+
+img.robot2 {
+    padding: 0 0 0 20px;
 }
 
 p {
