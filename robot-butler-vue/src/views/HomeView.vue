@@ -32,7 +32,7 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="first"
+            v-model="email"
             :state="nameState"
             aria-describedby="input-live-help input-live-feedback"
             placeholder="    Email">
@@ -47,10 +47,10 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="last"
+            v-model="first"
             :state="nameState"
             aria-describedby="input-live-help input-live-feedback"
-            placeholder="     Name (last)"
+            placeholder="     Name (first)"
             trim
           ></b-form-input>
 
@@ -61,7 +61,7 @@
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
-            v-model="email"
+            v-model="last"
             :state="nameState"
             aria-describedby="input-live-help input-live-feedback"
             placeholder="     Name (last)"
@@ -115,7 +115,7 @@ export default {
     },
     computed: {
       nameState() {
-        return this.first.length > 1 ? true : false
+        return this.email.length > 1 ? true : false
       }
     },
     data() {
