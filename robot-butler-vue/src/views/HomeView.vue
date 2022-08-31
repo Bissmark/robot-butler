@@ -62,7 +62,7 @@
 
     <p>What Features and Functions would you like to recieve up dates on?</p>
   
-      <div class="checkboxes"> 
+      <!-- <div class="checkboxes"> 
         <div>
           <input type="checkbox" id="accept" class="form-check-input">
           <label class="form-check-label" for="accept">Personalization</label>
@@ -79,11 +79,28 @@
           <input type="checkbox" id="accept" class="form-check-input">
           <label class="form-check-label" for="accept">Other services and products</label>
         </div>
+      </div> -->
+
+      <div class="checkbox">
+
+        <b-form-checkbox size="lg"></b-form-checkbox>
+        <p class="checkbox">Personalization</p>
+
+        <b-form-checkbox size="lg"></b-form-checkbox>
+        <p class="checkbox">Skills: cooking, cleaning etc</p>
+
+        <b-form-checkbox size="lg"></b-form-checkbox>
+        <p class="checkbox">Robot upgrades</p>
+
+        <b-form-checkbox size="lg"></b-form-checkbox>
+        <p class="checkbox">Other services and products</p>
+      
       </div>
+
       <div>
         <b-button class="signup" v-b-modal.modal-1>Sign up</b-button>
         <b-modal id="modal-1" content-class="alertBackground" title="Thank you for signing up!">
-          <p class="my-4">A confirmation email has been sent to your inbox to confirm</p>
+          <p class="my-4">A welcome email has been sent to your inbox to confirm</p>
           <p>We do not send spam. All newsletters can be easily unsubscribed via the email.</p>
         </b-modal>
       </div>
@@ -141,6 +158,13 @@ export default {
   border-radius: 24px;
   border: none;
   background-color: #5d68d1;
+}
+
+.checkbox {
+  font-size: 20px;
+  font-family: "Iceland-Regular";
+  display: inline;
+  text-align: center;
 }
 
 .ALL {
