@@ -15,7 +15,9 @@
     <p>To keep up to date with the new robot Features and Functions sign up to our news letter.</p>
     
     <form>
+
       <div role="group">
+
         <label for="input-live"></label>
           <b-form-input
             id="input-live"
@@ -64,22 +66,27 @@
   
     <form>
       <div class="checkboxes">
+
         <div>
           <b-form-checkbox inline size="lg"></b-form-checkbox>
           <p class="checkbox">Personalization</p>
         </div>
+
         <div>
-        <b-form-checkbox inline size="lg"></b-form-checkbox>
-        <p class="checkbox">Skills: cooking, cleaning etc</p>
+          <b-form-checkbox inline size="lg"></b-form-checkbox>
+          <p class="checkbox">Skills: cooking, cleaning etc</p>
         </div>
+
         <div>
-        <b-form-checkbox inline size="lg"></b-form-checkbox>
-        <p class="checkbox">Robot upgrades</p>
+          <b-form-checkbox inline size="lg"></b-form-checkbox>
+          <p class="checkbox">Robot upgrades</p>
         </div>
+
         <div>
-        <b-form-checkbox inline size="lg"></b-form-checkbox>
-        <p class="checkbox">Other services and products</p>
+          <b-form-checkbox inline size="lg"></b-form-checkbox>
+          <p class="checkbox">Other services and products</p>
         </div>
+
       </div>
 
       <div>
