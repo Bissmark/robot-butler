@@ -145,6 +145,11 @@ export default {
   background-color: #5d68d1;
 }
 
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
 .checkboxes div {
   display: flex;
   justify-content: left;
